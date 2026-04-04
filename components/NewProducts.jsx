@@ -63,11 +63,8 @@ const liked = (id) => {
     return (
         <div className="py-24">
 
-            <div className="py-24 mx-auto">
-                <div className="flex justify-between items-center">
-                    <h1 className="text-3xl font-bold">Tavsiya etilgan mahsulotlar</h1>
-                    <Link href={"/products"} className="flex items-center gap-2 justify-center text-green-700 hover:text-green-500">Barchasini ko‘rish<ArrowRight /></Link>
-                </div>
+            <div className=" mx-auto">
+                
 
             </div>
             <div className="mt-12  grid grid-cols-4 mt-12 gap-10">

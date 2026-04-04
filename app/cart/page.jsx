@@ -1,6 +1,7 @@
 'use client'
 
 import { Minus, Plus, Trash2 } from "lucide-react"
+import Link from "next/link"
 import { useState } from "react"
 
 const Page = () => {
@@ -89,15 +90,16 @@ const Page = () => {
               <h1 className="text-2xl font-bold">Jami</h1>
               <h2 className="text-xl text-green-600 font-bold">245000</h2>
             </div>
-
-            <button className="py-3 px-6 active:scale-90 rounded-xl w-full mt-3 bg-green-600 text-white">
-              Rasmiylashtirish
-            </button>
-
-            <button className="py-3 px-6 active:scale-90 rounded-xl w-full mt-3 bg-gray-100">
-              Haridni davom ettirish
-            </button>
-
+            <Link href={'/checkout'}>
+              <button className="py-3 px-6 active:scale-90 rounded-xl w-full mt-3 bg-green-600 text-white">
+                Rasmiylashtirish
+              </button>
+            </Link>
+            <Link href={'/products'}>
+              <button className="py-3 px-6 active:scale-90 rounded-xl w-full mt-3 bg-gray-100">
+                Haridni davom ettirish
+              </button>
+            </Link>
 
             <div className="p-4 rounded-xl bg-[#F7FAF6] mt-6">
               <p className="text-[14px]">
