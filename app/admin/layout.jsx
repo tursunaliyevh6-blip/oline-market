@@ -56,7 +56,7 @@ const layout = ({ children }) => {
 
 
             </div>
-            <div className="flex-1 bg[#F9FAFB]">
+            <div className="flex-1 bg-[#F9FAFB]">
                 <AdminNav/>
                 {children}
             </div>
