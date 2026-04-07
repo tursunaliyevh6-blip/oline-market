@@ -157,8 +157,8 @@ const page = () => {
     </thead>
     <tbody>
       {
-        newOrders?.map((item) => (
-          <tr key={item.id} className="border-b border-b-gray-100">
+        newOrders?.map((item, i) => (
+          <tr key={`${item.id}-${i}`} className="border-b border-b-gray-100">
             <td className="p-3 ">{item.id}</td>
             <td className="p-3 ">{item.mijoz}</td>
             <td className="p-3 ">{item.maxsulotlar}</td>
