@@ -31,6 +31,20 @@ const Page = () => {
       price: 39.99,
       ombor: 78,
       rasm: "https://cdn-img.birbir.uz/i/800x800-fit/files/11/f8/89cf978fa8a236331d4dd29954a0.jpg",
+    },    {
+      id: 4,
+      name: "Bolalar hudi sviteri",
+      toifa: "bolalar kiyimlari",
+      price: 39.99,
+      ombor: 78,
+      rasm: "https://cdn-img.birbir.uz/i/800x800-fit/files/11/f8/89cf978fa8a236331d4dd29954a0.jpg",
+    },    {
+      id: 5,
+      name: "Bolalar hudi sviteri",
+      toifa: "bolalar kiyimlari",
+      price: 39.99,
+      ombor: 78,
+      rasm: "https://cdn-img.birbir.uz/i/800x800-fit/files/11/f8/89cf978fa8a236331d4dd29954a0.jpg",
     },
   ]);
 
