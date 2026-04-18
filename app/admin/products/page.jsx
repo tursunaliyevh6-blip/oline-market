@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import AdminOchirishModal from "@/components/AdminOchirishModal";
 import AdminYangilash from "@/components/AdminYangilash";
 import { Pen, Plus, Trash2 } from "lucide-react";
+import MahsulotQoshish from "@/components/MahsulotQoshish";
 
 const Page = () => {
 
@@ -68,10 +69,12 @@ const Page = () => {
         </div>
 
         <div>
-          <button className="flex items-center ml-auto gap-3 text-xl hover:bg-green-700 bg-green-600 px-3 py-2 rounded-xl text-white">
-            <Plus size={25} />
+          <MahsulotQoshish>
+          <button >
+            
             Mahsulot qo'shish
           </button>
+          </MahsulotQoshish>
         </div>
       </div>
 

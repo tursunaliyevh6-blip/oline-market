@@ -127,7 +127,7 @@ const Page = () => {
 
                 <td className="p-4 text-gray-500">{o.date}</td>
                 <td className="p-4">
-                  <Link href={`/admin/orders/buyuttmalar/${o.id}?name=${o.name}&date=${o.date}`}>
+                  <Link href={`/admin/orders/${o.id}`}>
                     <div className="flex gap-2 items-center text-green-600 cursor-pointer hover:bg-green-50 mx-5 my-2 rounded-xl justify-center w-25 h-10">
                       <Eye /> Ko‘rish
                     </div>

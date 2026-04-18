@@ -5,51 +5,10 @@ import Link from "next/link";
 import toast from "react-hot-toast";
 import { useGetNotify } from "@/hook/nodifay";
 
-const NewProducts = () => {
+const NewProducts = ({products}) => {
 const notify = useGetNotify()
 
-    const products = [
-        {
-            id: 1,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: true
-
-        }, {
-            id: 2,
-            img: "https://olcha.uz/image/600x600/products/supplier/stores/1/2023-07-21/1z7KzademhhdJasi0dp5fuPWagizasRwaWIVeDSYFAhL5OIl9JIOHEcasfL4.jpg",
-            categoryname: "Bolalar kiyimlari",
-            name: "Shim va fudbolka",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 10000,
-            sanoq: 5,
-            isliked: false
-        }, {
-            id: 3,
-            img: "https://olcha.uz/image/700x700/products/supplier/stores/1/2023-07-21/lRK9fzv3Kd7srSMBXJTs8kFtragHVs7iPFdXtBGteXMgHeTLSUxA2PrYmyYV.jpg",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 150000,
-            sanoq: 10,
-            isliked: true
-
-        }, {
-            id: 4,
-            img: "https://i.pinimg.com/1200x/dd/9f/88/dd9f881fafdaf39d90feee09db318823.jpg",
-            categoryname: "Bolalar kiyimlari",
-            name: "Shim va fudbolka",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 20000,
-            sanoq: 50,
-            isliked: false
-
-        },
-    ];
+  
 const savat = () => {
   toast.success("Maxsulot savatga qo'shildi")
 }

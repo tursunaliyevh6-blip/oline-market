@@ -23,7 +23,7 @@ const Carusel = () => {
       name: "Bolalar uchun chegirmalar",
       id: 1,
       desc: "Bolalar kiyimlarida maxsus narxlar va qulay tanlovlar.",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQUOO7uHFWRys53aOnStvLoI2PKjF2JnCx8A&s",
+      img: "https://suret.pics/uploads/posts/2023-09/1695454060_2-51.jpg",
     },
     {
       name: "Ayollar kiyimlari",

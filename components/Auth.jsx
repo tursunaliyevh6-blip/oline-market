@@ -62,7 +62,7 @@ export default function AuthModal({ children }) {
     }
     return (
         <div>
-            <button onClick={handleOpen}>{children}</button>
+            <div onClick={handleOpen}>{children}</div>
             <Modal
                 open={open}
                 onClose={handleClose}

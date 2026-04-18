@@ -17,8 +17,8 @@ const style = {
   width: { xs: '95%', md: 700 },
   bgcolor: '#fff',
   borderRadius: 3,
-  
-  boxShadow: 24,
+
+
   p: 4,
 };
 
@@ -26,14 +26,14 @@ export default function AdminYangilash({ children, item, onSave }) {
   const [open, setOpen] = React.useState(false);
   const [form, setForm] = React.useState(item);
 
- 
+
 
   React.useEffect(() => {
     setForm(item);
   }, [item]);
 
   const handleSave = () => {
-    onSave(form); 
+    onSave(form);
     setOpen(false);
   };
 
@@ -47,9 +47,9 @@ export default function AdminYangilash({ children, item, onSave }) {
         <Box sx={style}>
           <Typography variant="h5" fontWeight="bold" mb={3}>
             Mahsulotni tahrirlash
-            
+
           </Typography>
-          
+
 
           <Box display="flex" gap={2} mb={2}>
             <TextField
@@ -79,9 +79,9 @@ export default function AdminYangilash({ children, item, onSave }) {
               onChange={(e) =>
                 setForm({ ...form, toifa: e.target.value })
               }
-              
+
             >
-              
+
               <MenuItem value="bolalar kiyimlari">Bolalar kiyimlari</MenuItem>
               <MenuItem value="erkaklar">Erkaklar</MenuItem>
               <MenuItem value="ayollar">Ayollar</MenuItem>
@@ -122,18 +122,19 @@ export default function AdminYangilash({ children, item, onSave }) {
           </Box>
 
           <Box display="flex" gap={2}>
-            <button className='border px-30' fullWidth variant="outlined"onClick={() => setOpen(false)}>
+            <button
+              className="border flex-1 py-3 rounded-xl whitespace-nowrap"
+              onClick={() => setOpen(false)}
+            >
               Bekor qilish
             </button>
 
-            <Button
-              fullWidth
-              variant="contained"
-              color="success"
+            <button
+              className="bg-green-500 text-white font-[600] hover:bg-green-600 flex-1 py-3 rounded-xl whitespace-nowrap"
               onClick={handleSave}
             >
-              Saqlash
-            </Button>
+              Mahsulotni yangilash
+            </button>
           </Box>
         </Box>
       </Modal>

@@ -4,109 +4,39 @@ import { FaHeart } from "react-icons/fa";
 import Link from "next/link";
 import toast from "react-hot-toast";
 import NewProducts from "@/components/NewProducts";
+import { useGetProducts } from "@/hook/products";
+import Loading from "@/components/Loading";
+import { useGetNotify } from "@/hook/nodifay";
 
 
 
-const page =()=>{
-const notify = useGetNotify = () => {
+const ProductsPage = () => {
+    const notify = useGetNotify()
 
-    const products = [
-        {
-            id: 1,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: true
 
-        }, {
-            id: 2,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: false
-        }, {
-            id: 3,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: true
+    const { data, isLoading, error } = useGetProducts()
 
-        }, {
-            id: 4,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: false
+    const savat = () => {
+        notify("ok", "Maxsulot-savatga qo'shildi")
+    }
 
-        }, {
-            id: 5,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: false
+    const liked = (id) => {
+        console.log(id)
+        notify('ok', "sevimlilarga qo'shildi")
+    }
 
-        }, {
-            id: 6,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: false
+    if (isLoading) {
+        return <Loading />
+    }
 
-        }, {
-            id: 7,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: false
-
-        }, {
-            id: 8,
-            img: "https://i.pinimg.com/originals/0b/7a/ae/0b7aae748f53262be435533b73fbc7b4.png",
-            categoryname: "Bolalar kiyimlari",
-            name: "Fudbolka va shim",
-            desc: "Bolalar uchun baxorgi kiyim juda qulay va arzon narxlarda",
-            price: 65000,
-            sanoq: 99,
-            isliked: false
-
-        },
-    ];
-}
-const savat = () => {
-  toast.success("Maxsulot savatga qo'shildi")
-}
-
-const liked = (id) => {
-  console.log(id)
-  notify('ok', 'sevimlilardan ochirildi')
-}
+    const products = data?.data?.data;
 
     return (
         <div className="">
-            <NewProducts/>
+            <NewProducts  products={products}/>
         </div>
     );
-};
+}
+    ;
 
-export default NewProducts;
+    export default ProductsPage
