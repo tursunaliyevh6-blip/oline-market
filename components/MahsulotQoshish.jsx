@@ -96,7 +96,7 @@ export default function MahsulotQoshish() {
             />
           </div>
 
-          {/* Tavsif */}
+          
           <div className="mb-4">
             <textarea
               placeholder="Tavsif"

@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { X } from 'lucide-react';
+import { useRegister } from '@/hook/auth';
 
 const style = {
     position: 'absolute',
@@ -19,6 +20,7 @@ const style = {
 };
 
 export default function AuthModal({ children }) {
+    const {mutate, isPayload} = useRegister()
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -51,14 +53,12 @@ export default function AuthModal({ children }) {
     const handleLogin = (e) => {
         e.preventDefault()
         const logindata = { phonenunber, password }
-        console.log(logindata)
     }
 
 
     const handleRegestr = (e) => {
         e.preventDefault()
         const regestr = { phonenunber, password, firstname, lastname }
-        console.log(regestr)
     }
     return (
         <div>

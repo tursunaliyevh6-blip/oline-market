@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const orders = [
   {
-    id: "ORD-003",
+    id: "ORD-001",
     name: "Michael Chen",
     phone: "+1-555-345-6789",
     products: 2,
@@ -23,7 +23,16 @@ const orders = [
     date: "2024-03-02",
   },
   {
-    id: "ORD-001",
+    id: "ORD-003",
+    name: "Ali Johnson",
+    phone: "+1-555-123-4567",
+    products: 2,
+    amount: 159.97,
+    status: "yangi",
+    date: "2024-03-04",
+  },
+  {
+    id: "ORD-004",
     name: "Ali Johnson",
     phone: "+1-555-123-4567",
     products: 2,

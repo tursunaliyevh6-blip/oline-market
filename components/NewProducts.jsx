@@ -1,5 +1,5 @@
 "use client";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingCart } from "lucide-react";
 import { FaHeart } from "react-icons/fa";
 import Link from "next/link";
 import toast from "react-hot-toast";
@@ -22,12 +22,9 @@ const NewProducts = ({ products }) => {
       <div className=" mx-auto"></div>
       <div className="mt-12  grid grid-cols-4 mt-12 gap-10">
         {products?.map((item) => (
-          <Link key={item.id} href={`/products/${item.id}`}>
-            <div>
-              <div
-                className="border border-gray-300 p-6 rounded-xl relative"
-                key={item.id}
-              >
+          <div key={item.id}>
+            <div className="border border-gray-300 p-6 rounded-xl relative">
+              <Link key={item.id} href={`/products/${item.id}`}>
                 <img
                   src={item.img}
                   alt={item.name}
@@ -48,17 +45,20 @@ const NewProducts = ({ products }) => {
                   </h1>
                   <p>{item.sanoq} qoldi</p>
                 </div>
-                <button
-                  onClick={() => savat()}
-                  className="bg-green-600 text-white text-xl mt-6 w-full py-3 rounded-xl hover:bg-green-500 active:scale-95"
-                >
-                  Savatga
-                </button>
-              </div>
+              </Link>
+              <button
+                onClick={() => savat()}
+                className="flex items-center justify-center gap-2 bg-green-500 text-white text-lg font-semibold mt-6 w-full py-3 rounded-2xl shadow-md hover:bg-green-7            00 hover:shadow-lg transition-all duration-300 active:scale-95"
+              >
+                <ShoppingCart size={20} />
+                <span>Savatga qo‘shish</span>
+              </button>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
+
+
     </div>
   );
 };

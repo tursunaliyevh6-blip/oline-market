@@ -29,13 +29,7 @@ const layout = ({ children }) => {
             link: '/orders'
 
         },
-        {
-            id: 4,
-            text: "Sozlamalar",
-            icon: <Settings />,
-            link: '/settings'
-
-        },
+        
 
     ]
 

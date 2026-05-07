@@ -6,6 +6,8 @@ import { BadgeDollarSign, Box, ChartNoAxesCombined, ShoppingCart } from "lucide-
 
 const page = () => {
 
+  
+
     const data = [
         { label: 'Yetkazilgan', value: 400, color: '#0088FE' },
         { label: 'Yangi', value: 300, color: '#00C49F' },

@@ -67,7 +67,7 @@ const Page = () => {
                         <h1 className="text-2xl font-[600]">Mijoz ma'lumotlari</h1>
 
                         <div className="mt-5">
-                            <p><span class="font-bold">Ism:</span>{order.name}</p>
+                            <p><span className="font-bold">Ism:</span>{order.name}</p>
                             <p><span className="font-bold">Telefon:</span> {order.phone}</p>
                             <p><span className="font-bold">Manzil:</span> {order.address}</p>
                         </div>
